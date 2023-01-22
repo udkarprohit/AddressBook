@@ -35,4 +35,39 @@ public class AddressBook {
         contacts.setPhoneNumber(phoneNumber);
         contacts.setEmail(email);
     }
+
+    //non-static method for editing user data
+    void editUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter First Name : ");
+        String firstName = scanner.nextLine();
+        if (firstName.equals(contacts.getFirstName())) {
+            System.out.print("Enter First Name : ");
+            String fName = scanner.nextLine();
+            System.out.print("Enter Last Name : ");
+            String lastName = scanner.nextLine();
+            System.out.print("Enter Address : ");
+            String address = scanner.nextLine();
+            System.out.print("Enter City Name : ");
+            String cityName = scanner.nextLine();
+            System.out.print("Enter State Name : ");
+            String stateName = scanner.nextLine();
+            System.out.print("Enter Zip Code : ");
+            String zipCode = scanner.nextLine();
+            System.out.print("Enter Phone Number : ");
+            String phoneNumber = scanner.nextLine();
+            System.out.print("Enter Email : ");
+            String email = scanner.nextLine();
+            contacts.setFirstName(fName);
+            contacts.setLastName(lastName);
+            contacts.setAddress(address);
+            contacts.setCityName(cityName);
+            contacts.setStateName(stateName);
+            contacts.setZipCode(zipCode);
+            contacts.setPhoneNumber(phoneNumber);
+            contacts.setEmail(email);
+        } else {
+            System.out.println("Enter the correct details");
+        }
+    }
 }
