@@ -70,4 +70,23 @@ public class AddressBook {
             System.out.println("Enter the correct details");
         }
     }
+
+    //non-static method for deleting user data
+    void deleteUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter First Name : ");
+        String firstName = scanner.nextLine();
+        if (firstName.equals(contacts.getFirstName())) {
+            contacts.setFirstName(null);
+            contacts.setLastName(null);
+            contacts.setAddress(null);
+            contacts.setCityName(null);
+            contacts.setStateName(null);
+            contacts.setZipCode(null);
+            contacts.setPhoneNumber(null);
+            contacts.setEmail(null);
+        } else {
+            System.out.println("Enter the correct details");
+        }
+    }
 }
