@@ -11,6 +11,8 @@ public class Contacts {
     private String phoneNumber;
     private String email;
 
+    public Contacts(String firstName, String lastName, String address, String cityName, String stateName, String zipCode, String phoneNumber, String email) {
+    }
 
     public String getFirstName() {
         return firstName;
@@ -75,4 +77,5 @@ public class Contacts {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
